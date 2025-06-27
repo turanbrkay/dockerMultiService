@@ -1,0 +1,14 @@
+C:\Users\turan\OneDrive\Desktop\projects\c#_app\bin\Debug\net8.0\c#_app.exe
+C:\Users\turan\OneDrive\Desktop\projects\c#_app\bin\Debug\net8.0\c#_app.deps.json
+C:\Users\turan\OneDrive\Desktop\projects\c#_app\bin\Debug\net8.0\c#_app.runtimeconfig.json
+C:\Users\turan\OneDrive\Desktop\projects\c#_app\bin\Debug\net8.0\c#_app.dll
+C:\Users\turan\OneDrive\Desktop\projects\c#_app\bin\Debug\net8.0\c#_app.pdb
+C:\Users\turan\OneDrive\Desktop\projects\c#_app\obj\Debug\net8.0\c#_app.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\turan\OneDrive\Desktop\projects\c#_app\obj\Debug\net8.0\c#_app.AssemblyInfoInputs.cache
+C:\Users\turan\OneDrive\Desktop\projects\c#_app\obj\Debug\net8.0\c#_app.AssemblyInfo.cs
+C:\Users\turan\OneDrive\Desktop\projects\c#_app\obj\Debug\net8.0\c#_app.csproj.CoreCompileInputs.cache
+C:\Users\turan\OneDrive\Desktop\projects\c#_app\obj\Debug\net8.0\c#_app.dll
+C:\Users\turan\OneDrive\Desktop\projects\c#_app\obj\Debug\net8.0\refint\c#_app.dll
+C:\Users\turan\OneDrive\Desktop\projects\c#_app\obj\Debug\net8.0\c#_app.pdb
+C:\Users\turan\OneDrive\Desktop\projects\c#_app\obj\Debug\net8.0\c#_app.genruntimeconfig.cache
+C:\Users\turan\OneDrive\Desktop\projects\c#_app\obj\Debug\net8.0\ref\c#_app.dll
