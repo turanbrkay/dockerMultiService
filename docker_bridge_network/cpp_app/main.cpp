@@ -43,7 +43,7 @@ int main()
     while (true)
     {
         auto now = std::chrono::steady_clock::now();
-        if (std::chrono::duration_cast<std::chrono::seconds>(now - start_time).count() > 120)
+        if (std::chrono::duration_cast<std::chrono::seconds>(now - start_time).count() > 240)
         {
             std::cout << "[UDP Server] Time limit reached. Exiting..." << std::endl;
             break;

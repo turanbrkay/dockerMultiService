@@ -17,7 +17,7 @@ class Program
         var stopwatch = Stopwatch.StartNew();
         bool waitingMessageShown = false;
 
-        while (stopwatch.Elapsed < TimeSpan.FromMinutes(2))
+        while (stopwatch.Elapsed < TimeSpan.FromMinutes(4))
         {
             if (!listener.Pending())
             {
