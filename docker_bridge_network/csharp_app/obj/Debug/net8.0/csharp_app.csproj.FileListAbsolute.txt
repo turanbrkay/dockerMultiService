@@ -1,0 +1,14 @@
+C:\Users\turan\OneDrive\Desktop\csharp_app\bin\Debug\net8.0\csharp_app.exe
+C:\Users\turan\OneDrive\Desktop\csharp_app\bin\Debug\net8.0\csharp_app.deps.json
+C:\Users\turan\OneDrive\Desktop\csharp_app\bin\Debug\net8.0\csharp_app.runtimeconfig.json
+C:\Users\turan\OneDrive\Desktop\csharp_app\bin\Debug\net8.0\csharp_app.dll
+C:\Users\turan\OneDrive\Desktop\csharp_app\bin\Debug\net8.0\csharp_app.pdb
+C:\Users\turan\OneDrive\Desktop\csharp_app\obj\Debug\net8.0\csharp_app.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\turan\OneDrive\Desktop\csharp_app\obj\Debug\net8.0\csharp_app.AssemblyInfoInputs.cache
+C:\Users\turan\OneDrive\Desktop\csharp_app\obj\Debug\net8.0\csharp_app.AssemblyInfo.cs
+C:\Users\turan\OneDrive\Desktop\csharp_app\obj\Debug\net8.0\csharp_app.csproj.CoreCompileInputs.cache
+C:\Users\turan\OneDrive\Desktop\csharp_app\obj\Debug\net8.0\csharp_app.dll
+C:\Users\turan\OneDrive\Desktop\csharp_app\obj\Debug\net8.0\refint\csharp_app.dll
+C:\Users\turan\OneDrive\Desktop\csharp_app\obj\Debug\net8.0\csharp_app.pdb
+C:\Users\turan\OneDrive\Desktop\csharp_app\obj\Debug\net8.0\csharp_app.genruntimeconfig.cache
+C:\Users\turan\OneDrive\Desktop\csharp_app\obj\Debug\net8.0\ref\csharp_app.dll
