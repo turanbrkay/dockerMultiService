@@ -1,7 +1,7 @@
 import socket
 import time
 
-APP1_HOST = "192.168.1.242"  # Hedef IP (veriyi alacak sunucu)
+APP1_HOST = "127.0.0.1"  # Hedef IP (veriyi alacak sunucu)
 APP1_PORT = 5000  # Hedef port (dinleyen sunucu portu)
 
 

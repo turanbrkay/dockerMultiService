@@ -62,7 +62,7 @@ int main()
         if (std::chrono::duration_cast<std::chrono::seconds>(now - start_time).count() > 240)
         {
             std::cout << "[UDP Server] Time limit reached. Exiting..." << std::endl;
-            break;
+            return 1;
         }
 
         char buffer[1024];
@@ -78,18 +78,7 @@ int main()
         std::string input(buffer, len);
         std::cout << "[app1 → udp_server] Received: " << input << std::endl;
 
-        auto updated = parse(input);
-        std::string output;
-        for (size_t i = 0; i < updated.size(); ++i)
-        {
-            output += std::to_string(updated[i]);
-            if (i != updated.size() - 1)
-                output += ",";
-        }
-
-        std::cout << "[udp_server] Processed (+3): " << output << std::endl;
-        std::cout << std::endl;
-    }
+            }
 
     close(server);
     return 0;

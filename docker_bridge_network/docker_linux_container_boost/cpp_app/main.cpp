@@ -1,12 +1,12 @@
+#include <boost/asio.hpp>
 #include <iostream>
 #include <string>
-#include <sstream>
 #include <vector>
-#include <winsock2.h>
+#include <sstream>
+#include <cstdlib>
 #include <chrono>
-#include <cstdlib> // getenv için
 
-#pragma comment(lib, "ws2_32.lib")
+using boost::asio::ip::udp;
 
 std::vector<int> parse(const std::string &input)
 {
@@ -22,40 +22,38 @@ std::vector<int> parse(const std::string &input)
 
 int main()
 {
-    WSADATA wsa;
-    WSAStartup(MAKEWORD(2, 2), &wsa);
-
-    // ⬇️ Ortam değişkeninden portu al
     const char *portEnv = std::getenv("APP2_PORT");
+    if (!portEnv)
+    {
+        std::cerr << "[ERROR] APP2_PORT environment variable not set!" << std::endl;
+        return 1;
+    }
     int port = std::stoi(portEnv);
 
-    SOCKET server = socket(AF_INET, SOCK_DGRAM, 0); // UDP socket
-    sockaddr_in addr;
-    addr.sin_family = AF_INET;
-    addr.sin_addr.s_addr = INADDR_ANY;
-    addr.sin_port = htons(port); // ⬅️ Port burada artık dinamik
+    boost::asio::io_context io_context;
+    udp::socket socket(io_context, udp::endpoint(udp::v4(), port));
 
-    bind(server, (sockaddr *)&addr, sizeof(addr));
     std::cout << "[UDP Server] Listening on port " << port << "..." << std::endl;
-
     auto start_time = std::chrono::steady_clock::now();
 
     while (true)
     {
         auto now = std::chrono::steady_clock::now();
-        if (std::chrono::duration_cast<std::chrono::seconds>(now - start_time).count() > 240)
+        if (std::chrono::duration_cast<std::chrono::seconds>(now - start_time).count() > 120)
         {
             std::cout << "[UDP Server] Time limit reached. Exiting..." << std::endl;
-            break;
+            return 0;
         }
 
         char buffer[1024];
-        sockaddr_in senderAddr;
-        int senderSize = sizeof(senderAddr);
-        int len = recvfrom(server, buffer, sizeof(buffer), 0, (sockaddr *)&senderAddr, &senderSize);
-        if (len == SOCKET_ERROR)
+        udp::endpoint remote_endpoint;
+        boost::system::error_code error;
+
+        size_t len = socket.receive_from(boost::asio::buffer(buffer), remote_endpoint, 0, error);
+
+        if (error && error != boost::asio::error::message_size)
         {
-            std::cerr << "[UDP Server] recvfrom failed." << std::endl;
+            std::cerr << "[ERROR] Receive failed: " << error.message() << std::endl;
             continue;
         }
 
@@ -63,7 +61,5 @@ int main()
         std::cout << "[app1 → udp_server] Received: " << input << std::endl;
     }
 
-    closesocket(server);
-    WSACleanup();
     return 0;
 }
