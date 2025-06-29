@@ -3,7 +3,7 @@ version: '3.8'
 services:
 
   app1:
-    build: ./c#_app
+    build: ./csharp_app
     env_file:
       - .env
     depends_on:
