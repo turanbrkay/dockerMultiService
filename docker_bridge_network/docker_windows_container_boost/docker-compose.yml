@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+
+  app1:
+    build: ./csharp_app
+    container_name: app1
+    env_file:
+      - .env
+    depends_on:
+      - app2
+    networks:
+      - appnet
+    ports:
+      - "${APP1_PORT}:${APP1_PORT}"  
+
+  app2:
+    build: ./cpp_app
+    container_name: app2
+    env_file:
+      - .env
+    networks:
+      - appnet
+    ports:
+      - "${APP2_PORT}:${APP2_PORT}"  
+
+networks:
+  appnet:
+    driver: bridge  
