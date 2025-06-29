@@ -1,0 +1,17 @@
+docker ps -a
+
+CONTAINER ID   IMAGE                             COMMAND       STATUS                      NAMES
+abc12345def6   docker_windows_container_boost-app2   "main.exe"    Exited (0) 2 hours ago     app2_container
+
+
+docker commit <container_id> my_custom_image_name
+docker commit app2_container my_custom_image_1
+
+docker save -o app2_image.tar app2_image_committed
+
+
+docker load -i my_custom_image_1.tar
+
+
+Daha sonra tekrardan docker-compose up --build -d
+çalıştır.
